@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Delete Notes
+{% endblock%}
+
+{% block content%}
+    <h1 class="page_delete">Delete Notes&nbsp;<i class="fa-solid fa-trash-can"></i></h1>
+    <h1 class="page_warning">WARNING: This action cannot be undone</h1>
+    <div class="notes">
+        <ul class="list-group notegroup" id="notes">
+            {% for note in user.notes %}
+            <li class="list-group-item notelist"> 
+                {{ note.note_data }}
+                <button type="button" class="close btn btn-outline delete" onClick="deleteNote('{{note.id}}')">
+                    <i class="fa-solid fa-square-xmark"></i> 
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                    <!-- <p class="delete">Delete</p> -->
+                </button>
+            </li>
+            
+            {% endfor %}
+        </ul>
+    </div>
+    <div align="right" class="bin_return">
+        <a class="btn btn-outline-info return" href="/"><i class="fa-solid fa-rotate-left fa-lg"></i>&nbsp;Done</a>
+    </div>
+{% endblock %}
