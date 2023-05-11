@@ -131,6 +131,7 @@ a.toggleDelete {
 }
 
 a.return {
+    font-weight: bold;
     border: solid 2px;
 }
 
@@ -156,6 +157,7 @@ ul.notegroup {
 }
 
 li.notelist {
+    background-color: #d2daf0;
     background-color: #ffebcd;
     padding: 15px;
     margin-bottom: 12px;
@@ -388,12 +390,23 @@ div.waves path.shape-fill {
     fill: #17a2b8;
 }
 
-div.moon {
+#eyes, #eyes img {
+    position: absolute;     
+    width: 19%;       
+}
+
+section.moon {
+    display: grid;
+    place-items: center;
     position: absolute;
     top: 45vh;
-    left: -1vw;
+    left: 1vw;
     z-index: 9999;
 }
+
+img.moon_moon {
+        width: 90%;
+    }
 
 @media (max-width: 1600px) {
     img.moon_moon {
