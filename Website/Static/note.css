@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #06263d;
+    background-color: #083453;
     /* background-image: linear-gradient(to top,#ffebcd,
     #ffdbb5,
     #ffca9f,
@@ -84,7 +84,6 @@ h1.page_warning {
     font-size: 1.2rem;
     font-weight: bold;
     color: crimson;
-    /* color: #f04668; */
     margin-top: 25px;
 }
 
@@ -95,6 +94,11 @@ h3.form {
 }
 
 /* Span */
+span.high_light {
+    font-size: 1.2em;
+    color: #f05340;
+}
+
 span.user_name {
     font-size: 1.2em;
     /* color: #ffebcd; */
@@ -166,7 +170,6 @@ li.notelist:first-child, li.notelist:last-child {
 }
 
 li::before {
-    /* font-size: 1rem; */
     font-family: "Font Awesome 5 Free"; 
     font: var(--fa-font-solid);
     content: "\f02e";
@@ -250,7 +253,7 @@ img.logo {
 
 /* Div & Other elements */
 div.notes {
-    /* font-size: 1.2rem; */
+    font-size: 1rem;
     width: 50%;
     min-width: 525px;
     margin: auto;
@@ -283,7 +286,6 @@ div.sign_in_form {
 }
 
 div.form-group {
-    /* color: #3b677f; */
     color: #ffebcd;
 }
 
@@ -306,7 +308,6 @@ div.add_note_textarea {
 }
 
 div.submit_note {
-    /* text-align: center; */
     margin-top: 12px;
     vertical-align: text-top;
     display: inline-block;
@@ -385,6 +386,19 @@ div.waves svg {
 
 div.waves path.shape-fill {
     fill: #17a2b8;
+}
+
+div.moon {
+    position: absolute;
+    top: 45vh;
+    left: -1vw;
+    z-index: 9999;
+}
+
+@media (max-width: 1600px) {
+    img.moon_moon {
+        display: none;
+    }
 }
 
 i.bin_icon {
