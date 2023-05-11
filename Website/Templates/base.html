@@ -12,6 +12,7 @@
     />
     <link rel="icon" href="{{ url_for('static', filename='img/bright-page.png') }}"/>
     <title>{% block title %}Home{% endblock%}</title>
+    <script defer src="{{ url_for('static', filename='eyes.js') }}"></script>
     <style>
         /* Global Styles */
         html {
@@ -405,15 +406,22 @@
             fill: #17a2b8;
         }
 
-        div.moon {
+        #eyes, #eyes img {
+            position: absolute;     
+            width: 19%;       
+        }
+
+        section.moon {
+            display: grid;
+            place-items: center;
             position: absolute;
-            top: 50vh;
-            left: 3vw;
+            top: 45vh;
+            left: 1vw;
             z-index: 9999;
         }
 
         img.moon_moon {
-                width: 80%;
+                width: 90%;
             }
 
         @media (max-width: 1600px) {
@@ -499,13 +507,13 @@
         {% endwith %}
     </section>
 
-    <div id="moon" class="moon">
-        <img class="moon_moon" src="{{ url_for('static', filename='img/moon_moon.png') }}">
+    <section id="moon" class="moon">
+        <img id="anchor" class="moon_moon" src="{{ url_for('static', filename='img/moon_moon.png') }}">
         <div id="eyes">
-            <img class="eyes" src="">
-            <img class="eyes" src="">
+            <img class="eyes" src="{{ url_for('static', filename='img/new-eye.png') }}" style="top:-26px; right:9px;">
+            <img class="eyes" src="{{ url_for('static', filename='img/new-eye.png') }}" style="top:-26px; right:69px;">
         </div>
-    </div>
+    </section>
 
     <div class="container">
         {% block content%}
