@@ -5,10 +5,9 @@
 {% endblock%}
 
 {% block content%}
-    <h1 class="login">Welcome Back<br/>Please log in to your account</h1>
+    <h1 class="login"><span class="high_light">Welcome Back</span><br/>Please log in to your account</h1>
     <div class="sign_in_form">
         <form method="POST" class="login"> 
-            <!-- <h3 align="center" class="form">Login</h3> -->
             <div class="form-group">
                 <label for="email"><strong>Email Address</strong></label> 
                 <input type="email" class="form-control form_input" id="email" name="email" placeholder="Enter email"/>
@@ -22,10 +21,4 @@
             </div>
         </form> 
     </div>
-
-    <!-- {% if boolean == True %}
-        True
-    {% else %}
-        False
-    {% endif %} -->
 {% endblock %}
