@@ -10,7 +10,7 @@
         <form  method="POST" action="/editSave">
             <div class="note_to_edit">
                 <input type="hidden" name="note_id" value="{{ note.id }}">
-                <textarea name="edited_note" class="form-control">{{ note.note_data }}</textarea>
+                <textarea name="edited_note" class="input">{{ note.note_data }}</textarea>
             </div>
             <div class="save_edit">
                 <button type="submit" class="btn btn-outline-info save"><i class="fa-solid fa-floppy-disk fa-lg"></i>&nbsp;Save</button>

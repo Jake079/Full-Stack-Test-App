@@ -12,8 +12,8 @@
             {% for note in user.notes %}
             <li class="list-group-item notelist"> 
                 {{ note.note_data }}
-                <button type="button" class="close btn btn-outline delete" onClick="deleteNote('{{note.id}}')">
-                    <i class="fa-solid fa-square-xmark"></i> 
+                <button type="button" class="btn close delete_btn" onClick="deleteNote('{{note.id}}')">
+                    <i class="fa-solid fa-square-xmark fa-lg"></i> 
                     <!-- <span aria-hidden="true">&times;</span> -->
                     <!-- <p class="delete">Delete</p> -->
                 </button>

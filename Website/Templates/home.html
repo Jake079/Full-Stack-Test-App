@@ -10,7 +10,7 @@
     <div class="notes">
         <ul class="list-group notegroup" id="notes">
             {% for note in user.notes %}
-            <li class="list-group-item notelist"> 
+            <li class="list-group-item border-top-0 border-bottom-0 notelist"> 
                 {{ note.note_data }}
                 <br/>
                 <div class="time_edit">
@@ -26,7 +26,7 @@
         <div class="add_note">
             <form method="POST" class="sumbit">
                 <div class="add_note_textarea">
-                    <textarea name="note" class="form-control input"></textarea>
+                    <textarea name="note" class="input"></textarea>
                 </div>
                 <div class="submit_note">
                     <button type="submit" class="btn btn-outline-info add_note"><i class="fa-solid fa-circle-plus fa-lg"></i>&nbsp;Add Note</button>
