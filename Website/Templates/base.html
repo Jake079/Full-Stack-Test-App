@@ -169,7 +169,13 @@
     
         /* Input fields */
         input.form_input {
+            color: #fff;
+            background-color: #111;
+            border: solid 1px #fff;
+            border-radius: 0.25rem;
+            height: 50px;
             width: 100%;
+            padding-inline: 10px;
         }
 
         textarea.input {
@@ -190,11 +196,26 @@
         ul.notegroup {
             margin-bottom: 30px;
         }
+
+        ul.bin_notegroup {
+            margin-bottom: 0px;
+        }
     
         li.notelist {
-            color: #fff;
-            background-color: #32353b;
+            color: #fff;     
             /* background-color: #ffebcd; */
+            background-color: #2c2f34;
+            background-image: linear-gradient(to right,#34383f,
+            #33373e,
+            #32363d,
+            #31353b,
+            #30343a,
+            #303339,
+            #2f3238,
+            #2e3136,
+            #2d3035,
+            #2c2f34
+            ); 
             padding: 18px;
             padding-inline: 25px;
             margin-bottom: 12px;
@@ -202,6 +223,7 @@
             border-right: solid 3px #17a2b8;
             /* border-radius: 1em; */
             text-align: left;
+            word-break: break-all;
         }
 
         li.notelist:first-child, li.notelist:last-child {
@@ -212,6 +234,7 @@
             border-right: solid 3px #17a2b8;
             /* border-radius: 1em; */
             text-align: left;
+            word-break: break-all;
         }
 
         li::before {
@@ -220,6 +243,18 @@
             content: "\f02e";
             color: #f05340;
             margin-right: 3px;
+        }
+
+        li.bin_notelist {
+            color: #fff;
+            background-color: #393c43;
+            padding: 18px;
+            padding-inline: 25px;
+            margin-bottom: 12px;
+            border-left: solid 3px #f05340;
+            border-right: solid 3px #17a2b8;
+            text-align: left;
+            word-break: break-all;
         }
     
         /* Text */
@@ -276,11 +311,11 @@
 
         button.delete_btn {
             color: #fff;
-            float: right;
+            /* float: right; */
         }
     
         button.delete_btn:hover {
-            color: crimson;
+            color: #fff;
         }
     
         /* Footer */
@@ -383,8 +418,23 @@
             z-index: 9999;
         }
 
+        div.note_to_delete {
+            width: 90%;
+            max-width: 95%;
+            min-width: 25%;
+            margin-right: 10px;
+            vertical-align: auto;
+            display: inline-block;
+        }
+
+        div.delete_button {
+            vertical-align: text-bottom;
+            display: inline-block;
+        }
+
         div.bin_return {
-            text-align: center;
+            text-align: left;
+            margin-top: 20px;
         }
 
         div.signature {
