@@ -56,6 +56,26 @@
             margin: 0 auto;
             max-width: 100%; 
         }
+
+        /* Scrollbar width */
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #3c3c3c;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #148799;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #11aec7;
+        }
         
         /* Nav */
         nav {
@@ -121,16 +141,22 @@
         }
 
         /* Span */
-        span.high_light {
+        span.high_light_sign_up {
             font-size: 1.2em;
             color: #f05340;
+            text-shadow: 5px 3px 0px #17a2b8;
+        }
+
+        span.high_light_login {
+            /* color: #f05340; */
+            font-size: 1.2em;
         }
 
         span.user_name {
             font-size: 1.2em;
             /* color: #ffebcd; */
             color: #f05340;
-            
+            /* text-shadow: 3px 3px 0px #17a2b8; */
         }
 
         /* Paragraphs */
@@ -155,11 +181,21 @@
             font-size: 1rem;
             font-weight: bold;
             border: solid 2px;
+            transition: transform 0.3s;
+        }
+
+        a.toggleDelete:hover {
+            transform: translateX(-10px);
         }
 
         a.return {
             font-weight: bold;
             border: solid 2px;
+            transition: transform 0.3s;
+        }
+
+        a.return:hover {
+            transform: scale(98%);
         }
 
         i.bin {
@@ -205,22 +241,24 @@
             color: #fff;     
             /* background-color: #ffebcd; */
             background-color: #2a313a;
-            /* background-image: linear-gradient(to right,#403938,
-            #40393a,
-            #40393b,
-            #3f3a3d,
-            #3e3a3e,
-            #3d3b3f,
-            #3b3b40,
-            #3a3c40,
-            #393c40,
-            #383d40);  */
+            background-image: linear-gradient(to bottom,#1e3047,
+            #1d2f46,
+            #1d2e44,
+            #1c2d43,
+            #1c2c42,
+            #1b2c40,
+            #1b2b3f,
+            #1a2a3e,
+            #1a293c,
+            #19283b
+            ); 
             padding: 18px;
             padding-inline: 25px;
             margin-bottom: 12px;
             border-left: solid 3px #f05340;
-            border-right: solid 3px #17a2b8;
-            /* border-radius: 1em; */
+            border-right: solid 3px #f05340;
+            border-bottom: solid 3px #f05340;
+            border-radius: 0.5em;
             text-align: left;
             word-break: break-all;
         }
@@ -230,8 +268,9 @@
             padding-inline: 25px;
             margin-bottom: 12px;
             border-left: solid 3px #f05340;
-            border-right: solid 3px #17a2b8;
-            /* border-radius: 1em; */
+            border-right: solid 3px #f05340;
+            border-bottom: solid 3px #f05340;
+            border-radius: 0.5em;
             text-align: left;
             word-break: break-all;
         }
@@ -245,13 +284,26 @@
         }
 
         li.bin_notelist {
-            color: #fff;
-            background-color: #393c43;
+            color: #fff;     
+            /* background-color: #ffebcd; */
+            background-color: #2a313a;
+            background-image: linear-gradient(to bottom,#1e3047,
+            #1d2f46,
+            #1d2e44,
+            #1c2d43,
+            #1c2c42,
+            #1b2c40,
+            #1b2b3f,
+            #1a2a3e,
+            #1a293c,
+            #19283b
+            ); 
             padding: 18px;
             padding-inline: 25px;
             margin-bottom: 12px;
-            border-left: solid 3px #f05340;
-            border-right: solid 3px #17a2b8;
+            border-left: solid 2px #f05340;
+            border-right: solid 2px #17a2b8;
+            border-radius: 0.5em;
             text-align: left;
             word-break: break-all;
         }
@@ -261,10 +313,11 @@
             font-size: 2rem;
             font-weight: bold;
             color: #eeeeee;
-            text-shadow: 0 0 2px #eeeeee; 
+            /* text-shadow: 0 0 2px #eeeeee;  */
             margin-left: 5px;
             border-radius: 1em;
             padding: 12px;
+            text-shadow: 5px 3px 0px #eb452b;
         }
 
         text.date {
@@ -282,6 +335,11 @@
             font-size: 1rem;
             font-weight: bold;
             border: solid 2px;
+            transition: transform 0.1s;
+        }
+
+        button.add_note:hover {
+            transform: scale(98%);
         }
 
         button.edit_button {
@@ -293,12 +351,13 @@
             padding-bottom: 2px;
             padding-left: 6px;
             padding-right: 6px;
+            transition: transform 0.3s;
         }
 
         button.edit_button:hover {
-            background-color: #118290;
-            border-color: #118290;
+            border-color: #17a2b8;
             color: #ffffff;
+            transform: scale(105%);
         }
     
         button.save {
@@ -306,6 +365,11 @@
             margin-top: 15px;
             margin-bottom: 30px;
             border: solid 2px;
+            transition: transform 0.3s;
+        }
+
+        button.save:hover {
+            transform: scale(98%);
         }
 
         button.delete_btn {
@@ -412,7 +476,7 @@
         div.bin {
             position: fixed;
             bottom: 6vh;
-            right: -15px;
+            right: -50px;
             margin: 10px; 
             z-index: 9999;
         }
@@ -533,7 +597,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" id="home" href="">
-                <text class="flask_note_logo" href="">N O T E D 2.0&nbsp;<i class="fa-solid fa-mug-hot fa-xl"></i></text>
+                <text class="flask_note_logo" href="">N O T E D 2.0&nbsp;<i class="fa-solid fa-mug-hot fa-lg"></i></text>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                 <span class="navbar-toggler-icon"></span>

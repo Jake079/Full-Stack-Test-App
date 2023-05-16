@@ -10,7 +10,7 @@
     <div class="notes">
         <ul class="list-group notegroup" id="notes">
             {% for note in user.notes %}
-            <li class="list-group-item border-top-0 border-bottom-0 notelist"> 
+            <li class="list-group-item border-top-0 border-left-0 notelist"> 
                 {{ note.note_data }}
                 <br/>
                 <div class="time_edit">
@@ -29,7 +29,7 @@
                     <textarea name="note" class="input"></textarea>
                 </div>
                 <div class="submit_note">
-                    <button type="submit" class="btn btn-outline-info add_note"><i class="fa-solid fa-circle-plus fa-lg"></i>&nbsp;Add Note</button>
+                    <button type="submit" class="btn btn-outline-info add_note"><i class="fa-solid fa-circle-plus"></i>&nbsp;Add Note</button>
                 </div>
                 
             </form>
@@ -37,7 +37,7 @@
     </div>
     <div class="bin">
         {% if user.notes %}
-        <a name= "bin" class="btn btn-outline-danger toggleDelete" href="/note_bin"><i class="fa-solid fa-caret-right"></i>&nbsp;<i class="fa-solid fa-trash-can fa-2xl bin_icon"></i></a>
+        <a name= "bin" class="btn btn-outline-danger toggleDelete" href="/note_bin"><i class="fa-solid fa-caret-right"></i>&nbsp;<i class="fa-solid fa-trash-can fa-2xl bin_icon"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         {% else %}
         {% endif %}
     </div>
