@@ -144,7 +144,7 @@
         span.high_light_sign_up {
             font-size: 1.2em;
             color: #f05340;
-            text-shadow: 5px 3px 0px #17a2b8;
+            text-shadow: 3px 3px 0px #17a2b8, 5px 5px 0px #e6dc23;
         }
 
         span.high_light_login {
@@ -241,15 +241,15 @@
             color: #fff;     
             /* background-color: #ffebcd; */
             background-color: #2a313a;
-            background-image: linear-gradient(to bottom,#1e3047,
-            #1d2f46,
-            #1d2e44,
-            #1c2d43,
-            #1c2c42,
-            #1b2c40,
-            #1b2b3f,
+            background-image: linear-gradient(to right,#233a56,
+            #223853,
+            #213650,
+            #20344d,
+            #1f324a,
+            #1d3047,
+            #1c2e44,
+            #1b2c41,
             #1a2a3e,
-            #1a293c,
             #19283b
             ); 
             padding: 18px;
@@ -287,15 +287,15 @@
             color: #fff;     
             /* background-color: #ffebcd; */
             background-color: #2a313a;
-            background-image: linear-gradient(to bottom,#1e3047,
-            #1d2f46,
+            background-image: linear-gradient(to right,#2a4465,
+            #284160,
+            #263e5b,
+            #243a57,
+            #223752,
+            #20344d,
+            #1e3149,
             #1d2e44,
-            #1c2d43,
-            #1c2c42,
-            #1b2c40,
             #1b2b3f,
-            #1a2a3e,
-            #1a293c,
             #19283b
             ); 
             padding: 18px;
@@ -677,6 +677,16 @@
             </svg>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
@@ -685,7 +695,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        
+
     <script src="https://kit.fontawesome.com/cf51b9ad56.js" crossorigin="anonymous"></script>
 
     <script
