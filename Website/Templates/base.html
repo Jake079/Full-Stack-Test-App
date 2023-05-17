@@ -12,7 +12,6 @@
     />
     <link rel="icon" href="{{ url_for('static', filename='img/bright-page.png') }}"/>
     <title>{% block title %}Home{% endblock%}</title>
-    <script defer src="{{ url_for('static', filename='eyes.js') }}"></script>
     <style>
         /* Global Styles */
         html {
@@ -677,6 +676,7 @@
             </svg>
         </div>
     </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", function(event) { 
             var scrollpos = localStorage.getItem('scrollpos');
@@ -697,6 +697,8 @@
         crossorigin="anonymous"></script>
 
     <script src="https://kit.fontawesome.com/cf51b9ad56.js" crossorigin="anonymous"></script>
+
+    <script defer src="{{ url_for('static', filename='eyes.js') }}"></script>
 
     <script
         type="text/javascript"
