@@ -572,11 +572,26 @@
             top: 45vh;
             left: -1vw;
             z-index: 9999;
+            animation: float 2s ease-in-out infinite;
         }
 
         img.moon_moon {
                 width: 90%;
+                transform: translatey(0px);
+	            
             }
+
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-10px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
 
         @media (max-width: 1600px) {
             img.moon_moon {
