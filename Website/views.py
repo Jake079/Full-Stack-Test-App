@@ -17,7 +17,6 @@ def home():
                   category='error')
         else:
             new_note = Note(note_data=note, user_id=current_user.id)
-            print(f'note_data: {note}')
             db.session.add(new_note)
             db.session.commit()
             flash('Note Added!', category='success')
@@ -40,7 +39,6 @@ def delete_note():
     deleted_note_data = note.note_data
     if note:
         if note.user_id == current_user.id:
-            print(f"note_data deleted : {deleted_note_data}")
             db.session.delete(note)
             db.session.commit()
             flash('Note Deleted!', category='success')
@@ -73,8 +71,6 @@ def editSave():
                 flash('Note is too short!',
                       category='error')
             else:
-                print(f'note_id: {note_id}')
-                print(f'edited_note_data: {edited_note_data}')
                 note_to_edit.note_data = edited_note_data  # Update the note data
                 db.session.commit()
                 flash('Edit Saved!', category='success')
