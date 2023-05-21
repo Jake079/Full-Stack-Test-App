@@ -1,3 +1,3 @@
 # NOTED 2.0 
 
-Allows user to add, edit and delete their notes also there's a cute moon that stares at your mouse cursor at all times
+A web app where you can create your own account and save, edit or delete your text files. Also there's a cute moon that stares at your mouse cursor at all times. I use HTML/CSS/JavaScript for frontend and Flask for backend.
