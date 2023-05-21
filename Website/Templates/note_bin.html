@@ -13,12 +13,13 @@
             <ul class="list-group bin_notegroup" id="notes">
                 <li class="list-group-item bin_notelist"> 
                     {{ note.note_data }}
+                    
                 </li>
             </ul>
         </div>
         <div class="delete_button">
             <button type="button" class="close btn delete_btn" onClick="deleteNote('{{note.id}}')">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-regular fa-circle-xmark fa-lg"></i>
                 <!-- <span aria-hidden="true">&times;</span> -->
                 <!-- <p class="delete">Delete</p> -->
             </button>

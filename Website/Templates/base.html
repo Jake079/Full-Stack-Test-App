@@ -381,11 +381,12 @@
 
         button.delete_btn {
             color: #fff;
-            /* float: right; */
+            transition: transform 0.05s;
         }
     
         button.delete_btn:hover {
             color: #fff;
+            transform: scale(110%);
         }
     
         /* Footer */
@@ -470,7 +471,7 @@
 
         div.note_to_edit {
             width: 80%;
-            min-width: 515px;
+            min-width: 50%;
             margin-left: 10px;
             vertical-align: text-top;
             display: inline-block;
@@ -493,15 +494,13 @@
 
         div.note_to_delete {
             width: 90%;
-            max-width: 95%;
-            min-width: 25%;
-            margin-right: 10px;
+            margin-right: 5px;
             vertical-align: auto;
             display: inline-block;
         }
 
         div.delete_button {
-            vertical-align: text-bottom;
+            vertical-align: middle;
             display: inline-block;
         }
 
