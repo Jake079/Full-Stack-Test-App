@@ -190,11 +190,12 @@
         a.return {
             font-weight: bold;
             border: solid 2px;
-            transition: transform 0.3s;
+            transition: transform 0.01s;
         }
 
         a.return:hover {
-            transform: scale(98%);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px #d44737; 
         }
 
         i.bin {
@@ -257,6 +258,7 @@
             border-left: solid 3px #f05340;
             border-right: solid 3px #f05340;
             border-bottom: solid 3px #f05340;
+            box-shadow: 3px 3px #f05340; 
             border-radius: 0.5em;
             text-align: left;
             word-break: break-all;
@@ -328,17 +330,25 @@
         /* Buttons */
         button.login_button {
             border: solid 2px;
+            transition: transform 0.01s;
+        }
+        
+        button.login_button:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px #d44737;  
         }
 
         button.add_note {
             font-size: 1rem;
             font-weight: bold;
             border: solid 2px;
-            transition: transform 0.1s;
+            transition: transform 0.01s;
         }
 
         button.add_note:hover {
-            transform: scale(98%);
+            /* background-color: #03788a !important; */
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px #d44737;   
         }
 
         button.edit_button {
@@ -350,25 +360,24 @@
             padding-bottom: 2px;
             padding-left: 6px;
             padding-right: 6px;
-            transition: transform 0.3s;
+            transition: transform 0.01s;
         }
 
         button.edit_button:hover {
             border-color: #17a2b8;
             color: #ffffff;
-            transform: scale(105%);
+            transform: scale(110%);
         }
     
         button.save {
             font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 30px;
             border: solid 2px;
-            transition: transform 0.3s;
+            transition: transform 0.01s;
         }
 
         button.save:hover {
-            transform: scale(98%);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px #d44737; 
         }
 
         button.delete_btn {
@@ -448,13 +457,14 @@
         div.add_note_textarea {
             width: 80%;
             min-width: 515px;
-            margin-right: 10px;
+            margin-left: 10px;
             vertical-align: text-top;
             display: inline-block;
         }
 
         div.submit_note {
             margin-top: 12px;
+            margin-left: 12px;
             vertical-align: text-top;
             display: inline-block;
         }
@@ -462,12 +472,14 @@
         div.note_to_edit {
             width: 80%;
             min-width: 515px;
-            margin-right: 10px;
+            margin-left: 10px;
             vertical-align: text-top;
             display: inline-block;
         }
 
         div.save_edit {
+            margin-top: 12px;
+            margin-left: 12px;
             vertical-align: text-top;
             display: inline-block;
         }
