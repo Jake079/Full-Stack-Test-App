@@ -4,11 +4,9 @@ from sqlalchemy.sql import func
 from datetime import datetime
 import pytz
 
-
 def GetTime():
     TP_time = datetime.now(pytz.timezone('Asia/Taipei'))
     return TP_time
-
 
 Current_Time = GetTime
 
