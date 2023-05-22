@@ -15,6 +15,7 @@
     <style>
         /* Global Styles */
         html {
+            visibility: hidden;
             font-size: 18px;
         }
         
@@ -431,8 +432,9 @@
         div.alert {
             position: fixed;
             width: 360px;
-            margin-top: 35px;
+            margin-top: 60px;
             margin-bottom: -100px;
+            z-index: 9999;
         }
 
         div.sign_in_form {
@@ -571,7 +573,7 @@
             position: absolute;
             top: 45vh;
             left: -1vw;
-            z-index: 9999;
+            z-index: 9998;
             animation: float 2s ease-in-out infinite;
         }
 
@@ -704,17 +706,20 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
+        document.addEventListener("DOMContentLoaded", function(event) {
             let scrollpos = sessionStorage.getItem('scrollpos');
-            if (scrollpos) window.scrollTo(0, scrollpos);
+            if (scrollpos) {
+                setTimeout(function() {
+                    window.scrollTo(0, scrollpos);
+                    document.documentElement.style.visibility = 'visible';
+                }, 0);
+            } else {
+                document.documentElement.style.visibility = 'visible';
+            }
         });
-
-        window.onbeforeunload = function(e) {
+    
+        window.addEventListener('beforeunload', function() {
             sessionStorage.setItem('scrollpos', window.scrollY);
-        };
-
-        window.on('onbeforeunload', function() {
-            window.scrollTop(0);
         });
     </script>
     
