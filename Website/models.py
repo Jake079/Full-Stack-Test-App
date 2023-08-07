@@ -8,15 +8,16 @@ def GetTime():
     TP_time = datetime.now(pytz.timezone('Asia/Taipei'))
     return TP_time
 
-Current_Time = GetTime
-
+Current_Time = GetTime()
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     note_data = db.Column(db.String(10000))
     date = db.Column(db.DateTime(timezone=True), default=Current_Time)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     # ('user.id') above is from the User class below except lower case (SQL foreigen key rule)
+    def formatted_time(self):
+        return self.date.strftime('%Y-%m-%d %H:%M:%S')
 
 
 class User(db.Model, UserMixin):

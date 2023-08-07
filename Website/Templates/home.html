@@ -16,7 +16,7 @@
                 <br/>
                 <div class="time_edit">
                     <form method="POST" action="/edit">
-                        <text class="date"><i class="fa-regular fa-clock fa-sm"></i>&nbsp;{{ note.date }}</text>
+                        <text class="date" name="note_date"><i class="fa-regular fa-clock fa-sm"></i>&nbsp;{{ note.formatted_time() }}</text>
                         <input type="hidden" name="note_id" id="note_id" value="{{ note.id }}">
                         <button class="btn edit_button"><i class="fa-solid fa-pen"></i></button>
                     </form>
