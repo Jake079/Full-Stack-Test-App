@@ -8,16 +8,6 @@
     <h1 class="page_name_note">Welcome back <span class="user_name">{{ user.user_name }}</span>&nbsp;<i class="fa-solid fa-mug-hot"></i></h1>
     <br>
     <h1 class="page_info">Capture your ideas in a single note and clear the slate whenever you want</h1>
-    <!-- <div class="folders">
-        <form method="POST" class="sumbit">
-            <div class="add_folder_textarea">
-                <textarea name="folder" class="input"></textarea>
-            </div>
-            <div class="submit_folder">
-                <button type="submit" class="btn btn-outline-info add_note"><i class="fa-solid fa-folder-plus"></i>&nbsp;New Folder</button>
-            </div>
-        </form>
-    </div> -->
     <div class="notes">
         <ul class="list-group notegroup" id="notes">
             {% for note in user.notes %}

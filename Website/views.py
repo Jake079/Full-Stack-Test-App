@@ -6,6 +6,7 @@ import json
 
 views = Blueprint('views', __name__)
 
+
 @views.route('/', methods=['GET', 'POST'])
 @login_required
 def home():
@@ -22,6 +23,41 @@ def home():
             return redirect(url_for('views.home'))
 
     return render_template("home.html", user=current_user)
+
+# @views.route('/', methods=['GET', 'POST'])
+# @login_required
+# def home():
+#     if request.method == 'POST':
+#         folder = request.form.get('folder')
+#         if len(folder) < 3:
+#             flash('Name is too short!',
+#                   category='error')
+#         else:
+#             new_folder = Note(folder_id=folder, user_id=current_user.id)
+#             db.session.add(new_folder)
+#             db.session.commit()
+#             flash('Folder Added!', category='success')
+#             return redirect(url_for('views.home'))
+
+#     return render_template("home.html", user=current_user)
+
+
+# @views.route('/notes', methods=['GET', 'POST'])
+# @login_required
+# def notes():
+#     if request.method == 'POST':
+#         note = request.form.get('note')
+#         if len(note) < 3:
+#             flash('Note is too short!',
+#                   category='error')
+#         else:
+#             new_note = Note(note_data=note, user_id=current_user.id)
+#             db.session.add(new_note)
+#             db.session.commit()
+#             flash('Note Added!', category='success')
+#             return redirect(url_for('views.notes'))
+
+#     return render_template("notes.html", user=current_user)
 
 
 @views.route('/note_bin', methods=['GET', 'POST'])
