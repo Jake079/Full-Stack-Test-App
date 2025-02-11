@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from os import path
+from os import path, makedirs
 from flask_login import LoginManager
 
 db = SQLAlchemy()
@@ -10,8 +10,16 @@ DB_NAME = "database.db"
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'FUN AI'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    db.init_app(app)
+
+    basedir = path.abspath(path.dirname(__file__)) #
+    instance_path = path.join(basedir, 'instance') #
+    DB_PATH = path.join(instance_path, DB_NAME)  #
+    
+    if not path.exists(instance_path):  #
+        makedirs(instance_path)  #
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_PATH}' #DB_NAME TO DB_PATH
+    db.init_app(app) 
 
     from .views import views
     from .auth import auth
@@ -36,7 +44,11 @@ def create_app():
 
 
 def create_database(app):
-    if not path.exists('Website/' + DB_NAME):
+    basedir = path.abspath(path.dirname(__file__)) #
+    instance_path = path.join(basedir, 'instance') #
+    DB_PATH = path.join(instance_path, DB_NAME) #
+
+    if not path.exists('Website/' + DB_PATH): #
         with app.app_context():
             db.create_all()
             print(' * Created Database!')
