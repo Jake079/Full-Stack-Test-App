@@ -1,0 +1,55 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyd
+.venv/       # Virtual environment (if you have one)
+venv/        # Another common virtual environment name
+*.egg-info
+
+# Flask-specific ignores (if applicable)
+instance/     # Flask instance folder (contains database, uploads, etc.)
+
+# Database files
+*.db        # All database files (SQLite, etc.)
+*.sqlite    # Specifically SQLite databases
+*.mdf       # Microsoft SQL Server database files
+*.ldb       # Berkeley DB files
+
+# OS and system files
+.DS_Store    # macOS system files
+Thumbs.db    # Windows thumbnail cache
+
+# Sensitive information & configuration files
+.env         # Environment variables file (keep sensitive info out of Git)
+config.ini   # Or any other configuration file that might contain secrets
+credentials.json # Example of a file containing credentials
+
+# Temporary files and logs
+*.tmp
+*.log
+*.swp       # Swap files (used by some editors)
+*~          # Backup files (used by some editors)
+.cache      # Cache directories
+
+# Packages and distribution
+dist/
+build/
+*.whl       # Python wheel files
+
+# Editor and IDE files (Optional - depends on your preference)
+.idea/      # PyCharm IDE files
+.vscode/    # VS Code settings (if you don't want to share workspace settings)
+*.pydev-project  # PyDev IDE files
+
+# Jupyter Notebook checkpoints (if applicable)
+.ipynb_checkpoints/
+
+# Other project-specific ignores (add as needed)
+# my_secret_folder/
+# data/
+
+# Example for ignoring a specific file
+# my_sensitive_file.txt
+
+# Example for ignoring all files of a specific type
+# *.txt

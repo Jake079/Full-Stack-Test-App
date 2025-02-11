@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Edit Note
+{% endblock %}
+
+{% block content %}
+    <h1 class="editing_note">Edit Note <i class="fa-solid fa-file-pen"></i></h1>
+    <div class="edit_notes">
+        <form  method="POST" action="/editSave">
+            <div class="note_to_edit">
+                <input type="hidden" name="note_id" value="{{ note.id }}">
+                <textarea name="edited_note" class="input">{{ note.note_data }}</textarea>
+            </div>
+            <div class="save_edit">
+                <button type="submit" class="btn btn-outline-info save"><i class="fa-solid fa-check fa-lg"></i>&nbsp;Save</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

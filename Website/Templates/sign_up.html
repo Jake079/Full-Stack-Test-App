@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock%}
+
+{% block content%}
+<h1 class="login">Simple, Easy & Free</br>Sign Up For <span class="high_light_sign_up">NOTED</span> Today&nbsp;<i class="fa-solid fa-feather-pointed"></i></h1>
+<div class="sign_in_form">
+    <form method="POST">
+        <div class="form-group">
+            <label for="email"><strong>Email Address</strong></label> 
+            <input type="email" class="form_input" id="email" name="email" placeholder="Enter email"/>
+        </div>
+        <div class="form-group">
+            <label for="userName"><strong>User Name</strong></label> 
+            <input type="text" class="form_input" id="userName" name="userName" placeholder="Enter user name"/>
+        </div>
+        <div class="form-group">
+            <label for="password1"><strong>Password</strong></label> 
+            <input type="password" class="form_input" id="password1" name="password1" placeholder="Enter password"/>
+        </div>
+        <div class="form-group">
+            <label for="password2"><strong>Password (Confirm)</strong></label> 
+            <input type="password" class="form_input" id="password2" name="password2" placeholder="Enter password again"/>
+        </div>
+        <div class="sign_up_submit">
+            <button type="submit" class="btn btn-outline-info login_button"><i class="fa-solid fa-user-plus"></i>&nbsp;Sign Up</button>
+        </div>
+    </form> 
+</div>
+{% endblock %}
