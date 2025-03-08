@@ -656,13 +656,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbar">
-                <div class="navbar-nav">
+            <div class="collapse navbar-collapse text-right"  id="navbar">
+                <div class="navbar-nav ml-auto ">
                     {% if user.is_authenticated %}
                     <a class="nav-item nav-link navclass" id="logout" href="/logout">&nbsp;<i class="fa fa-door-open"></i>&nbsp;Logout</a>
                     {% else %}
-                    <a class="nav-item nav-link navclass" id="login" href="/login">&nbsp;Log In</a> 
+                    <a class="nav-item nav-link navclass" id="login" href="/login">&nbsp;Log In</a>
                     <a class="nav-item nav-link navclass" id="signUp" href="/sign-up">&nbsp;Sign Up</a>
+                    <!-- <a class="nav-item nav-link navclass" id="login" href="/login">&nbsp;Log In</a> -->
                     {% endif %}
                 </div>
             </div>
