@@ -190,7 +190,8 @@ a.toggle-bin-btn:active {
 
 i.title_cup {
     color:#ffd79a;
-    text-shadow: 3px 3px #d44737;
+    text-shadow: 3px 2px #d44737,
+                 5px 4px #17a2b8;
 
 }
 
