@@ -1,10 +1,13 @@
 # Full Stack Note App
 
-A full stack web app using the following framework & libraries. 
-- Flask
-- SQLAlchemy
-- Werkzeug 
-- Jinja
+##Features
+- Create, read, update, and delete notes  
+- User registration & authentication  
+- Password hashing (Werkzeug)  
+- Flask for backend 
+- SQLAlchemy ORM for database
+- Jinja2 template rendering
+- Atan2 math function for frontend JavaScript visual tricks  
 
 To run the app, first set up your secret key as environment variable: 
 > export SECRET_KEY='your_secret_key_here' #Bash/Zsh
