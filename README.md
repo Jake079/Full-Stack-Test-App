@@ -3,10 +3,10 @@
 Create, read, update, and delete notes. 
 User registration & authentication + Password hashing.
 
-- **Backend:** Flask
-- **Database:** SQLAlchemy
-- **Template rendering:** Jinja2 
-- **Auth & security:** Werkzeug
+- Backend: **Flask**
+- Database: **SQLAlchemy**
+- Template rendering: **Jinja2** 
+- Auth & security: **Werkzeug**
 
 
 To run the app, first set up your secret key as environment variable: 
