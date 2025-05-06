@@ -13,4 +13,5 @@ To run the app, first set up your secret key as environment variable:
 
 > $env:SECRET_KEY = 'your_secret_key_here' #PowerShell
 
-Once the key is set, simply run: python main.py
+Once the key is set, simply run: 
+> python main.py
