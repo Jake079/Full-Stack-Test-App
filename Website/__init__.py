@@ -9,7 +9,6 @@ DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'FUN AI'
 
     basedir = path.abspath(path.dirname(__file__)) #
     instance_path = path.join(basedir, 'instance') #
