@@ -1,4 +1,4 @@
-# Full-Stack-Test-App
+# Full Stack Note App
 
 A full stack web app using the following framework & libraries. 
 - Flask
