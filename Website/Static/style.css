@@ -9,28 +9,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background-color: #083453; */
-    /* background-image: linear-gradient(to top,#ffebcd,
-    #ffdbb5,
-    #ffca9f,
-    #ffb88d,
-    #ffa480,
-    #ff8f79,
-    #ff7776,
-    #ff5d78,
-    #ff3d7f,
-    #ff008a
-    );  */
-    background-image: linear-gradient(to right,#083453,
-    #053052,
-    #052c51,
-    #06284f,
-    #09244d,
-    #0d204b,
-    #121b49,
-    #161745,
-    #191142,
-    #1d0b3e
+    background-image: linear-gradient(to right,#0d203c,
+    #0d1e3b,
+    #0d1c3b,
+    #0e1a3a,
+    #0f1739,
+    #101538,
+    #111237,
+    #131035,
+    #150c34,
+    #170832
     ); 
     /* background-image: url("{{ url_for('static', filename='img/Void.jpg') }}");  */
     font-family: Verdana, Tahoma, sans-serif;
@@ -53,13 +41,22 @@ background: #3c3c3c;
 }
 
 /* Handle */
+::-webkit-scrollbar {
+width: 16px; 
+}
+
 ::-webkit-scrollbar-thumb {
-background: #148799;
+background: #149099;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: #11aec7;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+background: #11c7be;
 }
 
 /* Nav */
@@ -68,50 +65,52 @@ nav {
 }
 
 /* Headings */
-h1.login {
+h1.login-title {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    color: #ffebcd;
+    color: #eeeeee;
     margin-top: 100px;
     margin-bottom: 60px;
 }
 
-h1.page_name_note {
+h1.page-note-title {
     text-align: center;
-    font-style: oblique;
     font-size: 4rem;
     font-weight: bold;
-    color: #ffebcd;
+    color: #eeeeee;
     margin-top: 100px;
 }
 
-h1.editing_note {
+
+
+h1.edit-note-title {
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
-    color: #ffebcd;
+    color: #eeeeee;
     margin-top: 100px;
     margin-bottom: 50px;
 }
 
-h1.page_delete {
+h1.page-bin-title {
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
-    color: #ffebcd;
+    color: #eeeeee;
     margin-top: 75px;
 }
 
-h1.page_info {
+h1.page-note-extra {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+    font-style: oblique;
     color: #ffd79a;
     margin-top: -10px;
 }
 
-h1.page_warning {
+h1.page-warning {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
@@ -126,22 +125,14 @@ h3.form {
 }
 
 /* Span */
-span.high_light_sign_up {
+span.sign-up-highlight {
     font-size: 1.2em;
     color: #f05340;
-    text-shadow: 3px 3px 0px #17a2b8, 5px 5px 0px #e6dc23;
+    /* text-shadow: 3px 2px 0px #17a2b8, 4px 3px 0px #e6dc23; */
 }
-
-span.high_light_login {
-    /* color: #f05340; */
-    font-size: 1.2em;
-}
-
-span.user_name {
-    font-size: 1.2em;
-    /* color: #ffebcd; */
+span.user-name {
+    font-size: 1em;
     color: #f05340;
-    /* text-shadow: 3px 3px 0px #17a2b8; */
 }
 
 /* Paragraphs */
@@ -162,35 +153,54 @@ a.navclass {
     margin-left: 0.5rem;
 }
 
-a.toggleDelete {
+
+
+a.button-style-01 {
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid 2px;
+    transition: transform 0.05s;
+}
+
+a.button-style-01:hover {
+    /* background-color: #03788a !important; */
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px #d44737;   
+}
+
+a.button-style-01:active {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px #d44737;   
+}
+
+a.toggle-bin-btn {
     font-size: 1rem;
     font-weight: bold;
     border: solid 2px;
     transition: transform 0.3s;
 }
 
-a.toggleDelete:hover {
+a.toggle-bin-btn:hover {
     transform: translateX(-12px);
 }
 
-a.return {
-    font-weight: bold;
-    border: solid 2px;
-    transition: transform 0.05s;
+a.toggle-bin-btn:active {
+    transform: translateX(-15px);;
 }
 
-a.return:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px #d44737; 
+i.title_cup {
+    color:#ffd79a;
+    text-shadow: 3px 3px #d44737;
+
 }
 
-i.bin {
-    padding: 15px;
+i.bin-icon {
+    padding: 6px;
 }
 
 
 /* Input fields */
-input.form_input {
+input.form-input {
     color: #fff;
     background-color: #111;
     border: solid 1px #17a2b8;
@@ -219,7 +229,7 @@ ul.notegroup {
     margin-bottom: 30px;
 }
 
-ul.bin_notegroup {
+ul.bin-notegroup {
     margin-bottom: 0px;
 }
 
@@ -240,7 +250,7 @@ li.notelist {
     ); 
     padding: 18px;
     padding-inline: 25px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     border-left: solid 3px #f05340;
     border-right: solid 3px #f05340;
     border-bottom: solid 3px #f05340;
@@ -253,7 +263,7 @@ li.notelist {
 li.notelist:first-child, li.notelist:last-child {
     padding: 18px;
     padding-inline: 25px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     border-left: solid 3px #f05340;
     border-right: solid 3px #f05340;
     border-bottom: solid 3px #f05340;
@@ -270,7 +280,7 @@ li::before {
     margin-right: 3px;
 }
 
-li.bin_notelist {
+li.bin-notelist {
     color: #fff;     
     /* background-color: #ffebcd; */
     background-color: #2a313a;
@@ -296,15 +306,16 @@ li.bin_notelist {
 }
 
 /* Text */
-text.flask_note_logo {
+text.flask-note-logo {
     font-size: 2rem;
     font-weight: bold;
     color: #eeeeee;
     /* text-shadow: 0 0 2px #eeeeee;  */
     margin-left: 5px;
+    /* border: solid 3px #eeeeee; */
     border-radius: 1em;
-    padding: 12px;
-    text-shadow: 5px 3px 0px #eb452b;
+    padding: 18px;
+    text-shadow: 3px 2px 0px #eb452b;
 }
 
 text.date {
@@ -313,30 +324,26 @@ text.date {
 }
 
 /* Buttons */
-button.login_button {
-    border: solid 2px;
-    transition: transform 0.05s;
-}
 
-button.login_button:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px #d44737;  
-}
-
-button.add_note {
+button.button-style-01 {
     font-size: 1rem;
     font-weight: bold;
     border: solid 2px;
     transition: transform 0.05s;
 }
 
-button.add_note:hover {
+button.button-style-01:hover {
     /* background-color: #03788a !important; */
     transform: translate(-3px, -3px);
     box-shadow: 3px 3px #d44737;   
 }
 
-button.edit_button {
+button.button-style-01:active {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px #d44737;   
+}
+
+button.edit-button {
     color: #17a2b8;
     float: right;
     border: solid 2px #17a2b8;
@@ -348,31 +355,31 @@ button.edit_button {
     transition: transform 0.05s;
 }
 
-button.edit_button:hover {
+button.edit-button:hover {
     border-color: #17a2b8;
     color: #ffffff;
     transform: scale(110%);
 }
 
-button.save {
-    font-weight: bold;
-    border: solid 2px;
-    transition: transform 0.05s;
+button.edit-button:active {
+    border-color: #17a2b8;
+    color: #ffffff;
+    transform: scale(100%);
 }
 
-button.save:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px #d44737; 
-}
-
-button.delete_btn {
+button.delete-btn {
     color: #fff;
     transition: transform 0.05s;
 }
 
-button.delete_btn:hover {
+button.delete-btn:hover {
     color: #fff;
     transform: scale(110%);
+}
+
+button.delete-btn:active {
+    color: #fff;
+    transform: scale(100%);
 }
 
 /* Footer */
@@ -401,12 +408,20 @@ div.notes {
     margin-top: 45px;
 }
 
-div.add_note {
+div.folders {
+    font-size: 1rem;
+    width: 50%;
+    min-width: 525px;
+    margin: auto;
+    margin-top: 45px;
+}
+
+div.add-note {
     margin: auto;
     overflow: auto;
 }
 
-div.edit_notes {
+div.edit-note-box {
     width: 50%;
     min-width: 525px;
     margin: auto;
@@ -417,12 +432,12 @@ div.edit_notes {
 div.alert {
     position: fixed;
     width: 360px;
-    margin-top: 60px;
+    margin-top: 45px;
     margin-bottom: -100px;
     z-index: 9999;
 }
 
-div.sign_in_form {
+div.sign-in-form {
     min-width: 100%;
     display: flex;
     justify-content: center;
@@ -432,17 +447,17 @@ div.form-group {
     color: #ffebcd;
 }
 
-div.sign_up_submit {
+div.sign-up-submit {
     text-align: center;
     margin-top: 45px;
     margin-bottom: 30px;
 }
 
-div.time_edit {
+div.time-edit {
     margin-top: 12px;
 }
 
-div.add_note_textarea {
+div.add-note-textarea {
     width: 80%;
     min-width: 515px;
     margin-left: 10px;
@@ -450,14 +465,14 @@ div.add_note_textarea {
     display: inline-block;
 }
 
-div.submit_note {
+div.submit-note {
     margin-top: 12px;
     margin-left: 12px;
     vertical-align: text-top;
     display: inline-block;
 }
 
-div.note_to_edit {
+div.note-to-edit {
     width: 80%;
     min-width: 50%;
     margin-left: 10px;
@@ -465,14 +480,14 @@ div.note_to_edit {
     display: inline-block;
 }
 
-div.save_edit {
+div.save-edit-btn {
     margin-top: 12px;
     margin-left: 12px;
     vertical-align: text-top;
     display: inline-block;
 }
 
-div.bin {
+div.bin-div {
     position: fixed;
     bottom: 6vh;
     right: -50px;
@@ -480,19 +495,19 @@ div.bin {
     z-index: 9999;
 }
 
-div.note_to_delete {
+div.note-to-delete {
     width: 90%;
     margin-right: 5px;
     vertical-align: auto;
     display: inline-block;
 }
 
-div.delete_button {
+div.delete-button {
     vertical-align: text-bottom;
     display: inline-block;
 }
 
-div.bin_return {
+div.bin-return {
     text-align: left;
     margin-top: 20px;
 }
@@ -555,14 +570,14 @@ div.waves path.shape-fill {
 section.moon {
     display: grid;
     place-items: center;
-    position: absolute;
+    position: fixed;
     top: 45vh;
     left: -1vw;
     z-index: 9998;
-    animation: float 2s ease-in-out infinite;
+    animation: float 2.5s ease-in-out infinite;
 }
 
-img.moon_moon {
+img.moon-moon {
         width: 90%;
         transform: translatey(0px);
         
@@ -581,18 +596,13 @@ img.moon_moon {
 }
 
 @media (max-width: 1600px) {
-    img.moon_moon {
+    img.moon-moon {
         display: none;
     }
 }
 
-i.bin_icon {
+i.bin-icon {
     padding-top: 22px;
     padding-bottom: 22px;
     padding-right: 8px;
-}
-
-i.welcome_logo {
-    margin-top: 75px;
-    margin-bottom: 75px;
 }

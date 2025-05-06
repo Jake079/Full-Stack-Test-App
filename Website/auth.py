@@ -65,4 +65,4 @@ def sign_up():
             # return redirect('/') will do but in case the url was changed it's better this way
             return redirect(url_for('auth.login'))
 
-    return render_template("sign_up.html", user=current_user)
+    return render_template("sign-up.html", user=current_user)

@@ -24,46 +24,11 @@ def home():
 
     return render_template("home.html", user=current_user)
 
-# @views.route('/', methods=['GET', 'POST'])
-# @login_required
-# def home():
-#     if request.method == 'POST':
-#         folder = request.form.get('folder')
-#         if len(folder) < 3:
-#             flash('Name is too short!',
-#                   category='error')
-#         else:
-#             new_folder = Note(folder_id=folder, user_id=current_user.id)
-#             db.session.add(new_folder)
-#             db.session.commit()
-#             flash('Folder Added!', category='success')
-#             return redirect(url_for('views.home'))
 
-#     return render_template("home.html", user=current_user)
-
-
-# @views.route('/notes', methods=['GET', 'POST'])
-# @login_required
-# def notes():
-#     if request.method == 'POST':
-#         note = request.form.get('note')
-#         if len(note) < 3:
-#             flash('Note is too short!',
-#                   category='error')
-#         else:
-#             new_note = Note(note_data=note, user_id=current_user.id)
-#             db.session.add(new_note)
-#             db.session.commit()
-#             flash('Note Added!', category='success')
-#             return redirect(url_for('views.notes'))
-
-#     return render_template("notes.html", user=current_user)
-
-
-@views.route('/note_bin', methods=['GET', 'POST'])
+@views.route('/note-bin', methods=['GET', 'POST'])
 @login_required
 def note_bin():
-    return render_template("note_bin.html", user=current_user)
+    return render_template("note-bin.html", user=current_user)
 
 
 @views.route('/delete-note', methods=['POST'])
@@ -83,19 +48,19 @@ def delete_note():
 
 @views.route('/edit', methods=['GET', 'POST'])
 @login_required
-def editPage():
-    note_id = request.form.get('note_id')
+def edit_page():
+    note_id = request.form.get('note-id')
     note_to_edit = Note.query.filter_by(id=note_id).first()
     if request.method == 'POST':
         return render_template('edit.html', note=note_to_edit, user=current_user)
 
 
-@views.route('/editSave', methods=['GET', 'POST'])
+@views.route('/save-edit', methods=['GET', 'POST'])
 @login_required
-def editSave():
-    note_id = request.form.get('note_id')
+def save_edit():
+    note_id = request.form.get('note-id')
     note_to_edit = Note.query.filter_by(id=note_id).first()
-    edited_note_data = request.form.get('edited_note')
+    edited_note_data = request.form.get('edited-note')
 
     if request.method == 'POST':
         if note_to_edit is None:
