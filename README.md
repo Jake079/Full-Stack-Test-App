@@ -1,6 +1,5 @@
 # Full Stack Note App
 
-##Features
 - Create, read, update, and delete notes  
 - User registration & authentication  
 - Password hashing (Werkzeug)  
