@@ -8,6 +8,8 @@ User registration & authentication + Password hashing.
 - Template rendering: **Jinja2** 
 - Auth & security: **Werkzeug**
 
+![web demo](img/demo.png)
+
 
 To run the app, first set up your secret key as environment variable: 
 > export SECRET_KEY='your_secret_key_here' #Bash/Zsh
