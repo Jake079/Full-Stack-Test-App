@@ -1,4 +1,4 @@
-# Full Stack Note App
+# Light-weight note-taking app using Flask
 
 Create, read, update, and delete notes. 
 User registration & authentication + Password hashing.
