@@ -47,6 +47,7 @@ width: 16px;
 
 ::-webkit-scrollbar-thumb {
 background: #149099;
+border-radius: 3px;
 }
 
 /* Handle on hover */
