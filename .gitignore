@@ -4,6 +4,7 @@ __pycache__/
 *.pyd
 .venv/       # Virtual environment (if you have one)
 venv/        # Another common virtual environment name
+venv_flask   # My personal preference
 *.egg-info
 
 # Flask-specific ignores (if applicable)
